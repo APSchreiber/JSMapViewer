@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title id="appConfig-webPageTitle">Application Title</title>
+	
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?" />
+    
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800' rel='stylesheet' type='text/css'>
+	
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="styles/map.css">
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    
+    <!-- Load custom dojo modules -->
+    <script>
+      var dojoConfig = { 
+        paths: {
+          handlers: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/handlers",
+          managers: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/managers",
+          regions: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/regions",
+          templates: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/templates",
+          widgets: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/widgets",
+          utils: location.pathname.replace(/\/[^/]+$/, "") + "/scripts/dojo/custom/utils"
+        }
+      };
+    </script>
+    
+    <script src="http://js.arcgis.com/3.14/"></script>
+
+    <!-- HS modules -->
+    <script src="scripts/hscontroller.js"></script>
+    <script src="scripts/hsconfig.js"></script>
+    
+    <!-- Canvas Resize (for resizing images) -->
+    <script src="scripts/canvasResize-master/binaryajax.js"></script>
+    <script src="scripts/canvasResize-master/exif.js"></script>
+    <script src="scripts/canvasResize-master/jquery.canvasResize.js"></script>
+    <script src="scripts/canvasResize-master/canvasResize.js"></script>
+    
+    <!-- HS Application Script -->
+    <script src="scripts/map.js"></script>
+	
+  </head>
+
+  <body class="claro">
+    
+    <!-- banner -->
+    <img id="bannerOpen" class="clickable" src="images/icons/tools-24.png" />
+    <img id="bannerClose" class="clickable" src="images/icons/tools-24.png" />
+    <div id="banner"></div>
+    
+    <!-- control panel -->
+    <div id="geolocationButtonAbsolute"></div>
+    <img id="panelOpen" class="clickable" src="images/gcicons/Icons/chevron-right-24.png">
+    <img id="panelClose" class="clickable" src="images/gcicons/Icons/chevron-left-24.png">
+    <div id="panel"></div>
+    
+    <div id="map"
+           data-dojo-type="dijit/layout/ContentPane" 
+           data-dojo-props="region:'center'" 
+           style="padding:0; overflow:hidden;">
+    </div>
+    
+    <!-- messages -->
+    <div id="messages"></div>
+    
+  </body>
+</html>       
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
