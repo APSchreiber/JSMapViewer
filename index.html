@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+    <meta charset="utf-8" />
+    <meta https-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
@@ -11,15 +11,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?" />
     
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800' rel='stylesheet' type='text/css'>
 	
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.14/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="handheld"> 
 	
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     
     <!-- Load custom dojo modules -->
     <script>
@@ -35,11 +36,10 @@
       };
     </script>
     
-    <script src="http://js.arcgis.com/3.14/"></script>
+    <script src="https://js.arcgis.com/3.14/"></script>
 
-    <!-- HS modules -->
-    <script src="scripts/hscontroller.js"></script>
-    <script src="scripts/hsconfig.js"></script>
+    <!-- Custom modules -->
+    <script src="scripts/config.js"></script>
     
     <!-- Canvas Resize (for resizing images) -->
     <script src="scripts/canvasResize-master/binaryajax.js"></script>
@@ -47,7 +47,7 @@
     <script src="scripts/canvasResize-master/jquery.canvasResize.js"></script>
     <script src="scripts/canvasResize-master/canvasResize.js"></script>
     
-    <!-- HS Application Script -->
+    <!-- Custom Application Script -->
     <script src="scripts/map.js"></script>
 	
   </head>
@@ -64,6 +64,9 @@
     <img id="panelOpen" class="clickable" src="images/gcicons/Icons/chevron-right-24.png">
     <img id="panelClose" class="clickable" src="images/gcicons/Icons/chevron-left-24.png">
     <div id="panel"></div>
+    
+    <!-- popout -->
+    <div id="popout"></div>
     
     <div id="map"
            data-dojo-type="dijit/layout/ContentPane" 
